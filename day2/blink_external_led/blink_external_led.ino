@@ -1,7 +1,7 @@
 // ============================================================================
-// Sketch   : onboard_led_hello_world.ino
+// Sketch   : blink_external_led.ino
 // Engineer : Christian Westbrook
-// Abstract : Blink onboard LED sporadically.
+// Abstract : Alternating fast and slow blinking of an external LED
 //
 //            This work is derivative of the Blink.ino sketch by
 //            Scott Fitzgerald, Arturo Guadalupi, and Colby Newman.
@@ -10,30 +10,36 @@
 //
 // ============================================================================
 
+// Imports
+#include "Arduino.h"
+
+// Constants
+#define CABIN_LIGHTS_PIN 12
+
 // ============================================================================
 // Function : setup()
 // Engineer : Christian Westbrook
-// Abstract : Initialize the onboard LED as an output
+// Abstract : Initialize a pin to provide power to the cabin lights
 // ============================================================================
 void setup() {
-  // Initialize digital pin LED_BUILTIN as an output.
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(CABIN_LIGHTS_PIN, OUTPUT);
 }
 // ============================================================================
 
 // ============================================================================
 // Function : loop()
 // Engineer : Christian Westbrook
-// Abstract : Blink the onboard LED with alternating fast and slow blinks
+// Abstract : Blink the cabin lights LED with alternating fast and slow blinks
 // ============================================================================
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);
+  digitalWrite(CABIN_LIGHTS_PIN, HIGH);
   delay(3000);
-  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(CABIN_LIGHTS_PIN, LOW);
   delay(1000);
-  digitalWrite(LED_BUILTIN, HIGH);
+
+  digitalWrite(CABIN_LIGHTS_PIN, HIGH);
   delay(500);
-  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(CABIN_LIGHTS_PIN, LOW);
   delay(1000);
 }
 // ============================================================================
