@@ -1,11 +1,11 @@
 // -----------------------------------------------------------------------------
 // Project  : 30 Days Lost In Space Adventure Kit by inventr.io
-// Day      : 2
+// Day      : 3
 //
 // Sketch   : blink_external_led.ino
 // Engineer : Christian Westbrook
 //
-// Abstract : This program causes the HERO board to control and link an external
+// Abstract : This program causes the HERO board to control and blink an external
 //            LED in a controlled way.
 // -----------------------------------------------------------------------------
 
@@ -21,7 +21,7 @@
 // Abstract : This required function is executed one time at startup. Use this
 //            function to initialize your program.
 //
-//            This function sets the onboard LED as an output.
+//            This function sets the external LED as an output.
 // -----------------------------------------------------------------------------
 void setup() {
   pinMode(CABIN_LIGHTS_PIN, OUTPUT);
